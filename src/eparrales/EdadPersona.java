@@ -28,24 +28,29 @@ public class EdadPersona {
     }
    
     public void ingresoEdades() {
-        for (int i = 0; i < edades.length; i++) {
-            System.out.println(" ingrese edad ");
-            int ed=sc.nextInt();
-            try {
-                if (ed > 0) {
-                    edades[i] = ed;
-                    this.cont++;
-                } else {
-                    break;
-                }
+        int ed = 0;
+        System.out.println(" ingrese edad ");
 
-            } catch (Exception e) {
-                System.out.println(" error" + e);
+        try {
+            ed = sc.nextInt();
+        } catch (Exception e) {
+            System.out.println(" error" + e);
+        }
+
+        for (int i = 0; i < edades.length; i++) {
+
+            if (ed > 0) {
+                edades[i] = ed;
+                this.cont++;
+            } else {
+                break;
             }
 
         }
 
     }
+
+    
     
     public int edadPromedio() {
 
