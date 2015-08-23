@@ -46,6 +46,7 @@ public class Taller {
             edadperson.ingresoEdades();
             System.out.println(" promedio: "+edadperson.edadPromedio());
             System.out.println(" edad max : "+edadperson.edadMaxima());
+            System.out.println(" edad minima : "+edadperson.edadMinima());
             
     }
     

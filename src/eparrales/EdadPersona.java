@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author UsuarioEp
  */
 public class EdadPersona {
-    private double []edades;
+    private int []edades;
     private double edadMedia;
     private int edadMax;
     private int edadMin;
@@ -24,7 +24,7 @@ public class EdadPersona {
 
     public EdadPersona() {
         sc = new Scanner(System.in);
-        edades= new double[4000];
+        edades= new int[4000];
         ed=0;
     }
    
@@ -70,16 +70,31 @@ public class EdadPersona {
     }
     
     public int edadMaxima(){
-        this.edadMax= (int) edades[0];
+        this.edadMax=  edades[0];
            for (int i = 0; i < edades.length; i++) {
             if (edades != null && edades[i]>this.edadMax) {
 
-                this.edadMax=(int) edades[i];
+                this.edadMax= edades[i];
 
             }
         }
            return this.edadMax;
         
     }
+    public int edadMinima() {
+        this.edadMin = edades[0];
+        int index = 0;
+        while (index < edades.length) {
+            if (edades != null && edades[index] < this.edadMin && edades[index]!=0) {
+                this.edadMin = edades[index];
+                index++;
 
+            } else {
+                index++;
+            }
+
+        }
+        return this.edadMin;
+
+    }
 }
