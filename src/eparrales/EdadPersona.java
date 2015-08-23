@@ -12,8 +12,8 @@ import java.util.Scanner;
  * @author UsuarioEp
  */
 public class EdadPersona {
-    private int[]edades;
-    private int edadMedia;
+    private double []edades;
+    private double edadMedia;
     private int edadMax;
     private int edadMin;
     private int cont;
@@ -24,7 +24,7 @@ public class EdadPersona {
 
     public EdadPersona() {
         sc = new Scanner(System.in);
-        edades= new int[4000];
+        edades= new double[4000];
         ed=0;
     }
    
@@ -42,7 +42,7 @@ public class EdadPersona {
                 break;
             }
 
-            if (ed > 0) {
+            if (ed >=0) {
                 edades[i] = ed;
                 this.cont++;
             } else {
@@ -55,19 +55,31 @@ public class EdadPersona {
 
     
     
-    public int edadPromedio() {
+    public double edadPromedio() {
 
         for (int i = 0; i < edades.length; i++) {
             if (edades != null) {
 
                 this.edadMedia += edades[i];
-               
+
             }
         }
-        
-      
+
         return edadMedia / this.cont;
 
+    }
+    
+    public int edadMaxima(){
+        this.edadMax= (int) edades[0];
+           for (int i = 0; i < edades.length; i++) {
+            if (edades != null && edades[i]>this.edadMax) {
+
+                this.edadMax=(int) edades[i];
+
+            }
+        }
+           return this.edadMax;
+        
     }
 
 }
