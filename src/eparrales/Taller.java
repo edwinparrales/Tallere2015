@@ -20,7 +20,7 @@ public class Taller {
         // TODO code application logic here
         /*Realizar la potencia a¨b  de dos numeros enteros positivos*/
         Scanner sc = new Scanner(System.in);
-        Operaciones operar = new Operaciones();
+        Potencia potencia = new Potencia();
         int base=0;
         int exponente=0;
         int result=1;
@@ -34,12 +34,14 @@ public class Taller {
               System.out.println(" Error "+e);
                       
           }
-             result=operar.potencia(base, exponente);
+             result=potencia.metodoPotencia0(base, exponente);
           
         
-            System.out.println(" el resultado es "+result);
+            System.out.println(" el resultado es metodo 0 "+result);
             
-            System.out.println(" metodo dos "+operar.potencia1(5, 0));
+            System.out.println(" metodo uno "+potencia.metodoPotencia1(5, 0));
+            System.out.println(" metodo dos "+potencia.metodoPotencia2(5, 0));
+            
     }
     
 }

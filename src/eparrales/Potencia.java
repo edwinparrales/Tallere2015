@@ -9,10 +9,10 @@ package eparrales;
  *
  * @author UsuarioEp
  */
-public class Operaciones {
+public class Potencia {
     
     
-    public int potencia(int base,int exponente){
+    public int metodoPotencia0(int base,int exponente){
         int resul=1;
          for (int exp = 0; exp < exponente; exp++) 
               resul=resul*base;
@@ -21,13 +21,27 @@ public class Operaciones {
         return  resul;
     }
     
-    public int potencia1(int base,int exponente){
+    public int metodoPotencia1(int base,int exponente){
         int result=1,cont=0;
         while(cont<exponente){
            result= result*base; 
            cont++;
         }
         return result;
+    }
+     public int metodoPotencia2(int base,int exponente){
+         int result = 1, cont = 0;
+         do {
+             if (exponente != 0) {
+                 result = result * base;
+                 cont++;
+             } 
+                 
+             
+           
+         } while (exponente < cont);
+
+         return result;
     }
     
 }
