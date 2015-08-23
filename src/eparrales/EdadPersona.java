@@ -6,7 +6,6 @@
 package eparrales;
 
 import java.util.Scanner;
-import sun.applet.Main;
 
 /**
  *
@@ -18,21 +17,23 @@ public class EdadPersona {
     private int edadMax;
     private int edadMin;
     private int cont;
-    Scanner sc;
+    private int ed;
+    private Scanner sc;
     
     
 
     public EdadPersona() {
         sc = new Scanner(System.in);
         edades= new int[4000];
+        ed=0;
     }
    
     public void ingresoEdades() {
-        int ed = 0;
+       
 
         for (int i = 0; i < edades.length; i++) {
 
-            System.out.println(" ingrese edad ");
+            System.out.println(" !!! ingrese edad ¡¡¡");
 
             try {
                 ed = sc.nextInt();
