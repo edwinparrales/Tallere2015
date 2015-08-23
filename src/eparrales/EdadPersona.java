@@ -29,15 +29,17 @@ public class EdadPersona {
    
     public void ingresoEdades() {
         int ed = 0;
-        System.out.println(" ingrese edad ");
-
-        try {
-            ed = sc.nextInt();
-        } catch (Exception e) {
-            System.out.println(" error" + e);
-        }
 
         for (int i = 0; i < edades.length; i++) {
+
+            System.out.println(" ingrese edad ");
+
+            try {
+                ed = sc.nextInt();
+            } catch (Exception e) {
+                System.out.println(" error" + e);
+                break;
+            }
 
             if (ed > 0) {
                 edades[i] = ed;
